@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
-public class splash extends Activity{
+public class Splash extends Activity{
 	MediaPlayer ourSong = new MediaPlayer();
 	@Override
 	protected void onCreate(Bundle TravisLoveBacon) {

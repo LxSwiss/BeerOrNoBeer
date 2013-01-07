@@ -18,7 +18,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class sendbrand  extends SherlockActivity implements View.OnClickListener{
+public class SendBrand  extends SherlockActivity implements View.OnClickListener{
 	
 	EditText brandname, country, brandcomment;
 	String sbrandname, scountry, sbrandcomment, radiobool;
