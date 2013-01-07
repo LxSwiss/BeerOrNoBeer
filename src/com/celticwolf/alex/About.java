@@ -16,7 +16,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.MenuInflater;
 
-public class about extends SherlockActivity implements View.OnClickListener{
+public class About extends SherlockActivity implements View.OnClickListener{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

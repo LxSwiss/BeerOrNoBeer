@@ -20,7 +20,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.MenuInflater;
 
-public class highscoreView extends SherlockActivity implements View.OnClickListener{
+public class HighscoreView extends SherlockActivity implements View.OnClickListener{
 	
 	GridView gridView;
 	TextView highscorelist;
