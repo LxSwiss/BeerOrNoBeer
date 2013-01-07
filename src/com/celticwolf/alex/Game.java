@@ -35,7 +35,7 @@ import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.google.android.apps.analytics.GoogleAnalyticsTracker;
 
-public class game extends SherlockActivity implements View.OnClickListener {
+public class Game extends SherlockActivity implements View.OnClickListener {
 
 	Button beer, noBeer, setbrand;
 	GoogleAnalyticsTracker tracker;

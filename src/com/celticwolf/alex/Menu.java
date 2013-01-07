@@ -11,7 +11,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.MenuInflater;
 
-public class menu extends SherlockActivity implements View.OnClickListener{
+public class Menu extends SherlockActivity implements View.OnClickListener{
 	
 	Button start,  about, sendbeer, banner;
 	

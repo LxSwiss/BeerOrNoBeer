@@ -2,6 +2,7 @@ package com.celticwolf.alex;
 
 
 //import android.app.Activity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,19 +10,44 @@ import android.os.Bundle;
 //import android.view.Menu;
 //import android.view.MenuInflater;
 import android.view.View;
-import android.support.v4.app.FragmentActivity;
-import com.actionbarsherlock.app.ActionBar;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+import android.widget.ListView;
+import android.widget.TextView;
+
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.MenuInflater;
 
-public class about extends SherlockActivity implements View.OnClickListener{
+public class HighscoreView extends SherlockActivity implements View.OnClickListener{
 	
+	GridView gridView;
+	TextView highscorelist;
+	Highscore highscoreobj;
+	String hsclist;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.about);
+		setContentView(R.layout.highscore);
+		
+		
+		highscorelist = (TextView) findViewById(R.id.tvHighscorelist);
+		
+		addContent();
+	}
+	private void addContent() {
+		highscoreobj = new Highscore(this);
+		
+		hsclist = "";
+		for(int i = 0; i<10; i++){
+		int leScore = highscoreobj.getScore(i);
+		String leDate = highscoreobj.getName(i);
+		hsclist = hsclist + (i+1) + ".\t"+ leDate + "\t :\t " + leScore + "\n";
+		}
+		highscorelist.setText(hsclist);
+		
+		
 		
 	}
 	@Override
@@ -29,6 +55,8 @@ public class about extends SherlockActivity implements View.OnClickListener{
 		MenuInflater inflater = getSupportMenuInflater();
 		inflater.inflate(R.menu.short_menu, menu);
 			getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+			
+			
 			
 		return true;
 	}
